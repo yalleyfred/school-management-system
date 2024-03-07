@@ -1,0 +1,24 @@
+{
+  "name": "sms-server",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/sms-server/src",
+  "projectType": "application",
+  "targets": {
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "sms-server:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "sms-server:build:development"
+        },
+        "production": {
+          "buildTarget": "sms-server:build:production"
+        }
+      }
+    }
+  },
+  "tags": []
+}

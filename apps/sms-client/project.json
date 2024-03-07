@@ -1,0 +1,75 @@
+{
+  "name": "sms-client",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "prefix": "school-management-system",
+  "sourceRoot": "apps/sms-client/src",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@angular-devkit/build-angular:application",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/sms-client",
+        "index": "apps/sms-client/src/index.html",
+        "browser": "apps/sms-client/src/main.ts",
+        "polyfills": ["zone.js"],
+        "tsConfig": "apps/sms-client/tsconfig.app.json",
+        "assets": [
+          "apps/sms-client/src/favicon.ico",
+          "apps/sms-client/src/assets"
+        ],
+        "styles": ["apps/sms-client/src/styles.css"],
+        "scripts": []
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "outputHashing": "all"
+        },
+        "development": {
+          "optimization": false,
+          "extractLicenses": false,
+          "sourceMap": true
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@angular-devkit/build-angular:dev-server",
+      "configurations": {
+        "production": {
+          "buildTarget": "sms-client:build:production"
+        },
+        "development": {
+          "buildTarget": "sms-client:build:development"
+        }
+      },
+      "defaultConfiguration": "development"
+    },
+    "extract-i18n": {
+      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "options": {
+        "buildTarget": "sms-client:build"
+      }
+    },
+    "serve-static": {
+      "executor": "@nx/web:file-server",
+      "options": {
+        "buildTarget": "sms-client:build",
+        "staticFilePath": "dist/apps/sms-client/browser"
+      }
+    }
+  }
+}
