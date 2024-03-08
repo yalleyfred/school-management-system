@@ -1,0 +1,20 @@
+<div class="login-main">
+  <div class="login-tab">
+    <img src="./../../../favicon.ico" alt="logo" />
+    <form [formGroup]="loginForm" (submit)="handleLoginSubmit()">
+      <school-management-system-input
+        label="Username"
+        name="username"
+        [formGroup]="loginForm"
+        [isError]="isLoginError"
+      />
+      <school-management-system-input
+        label="Password"
+        name="password"
+        [formGroup]="loginForm"
+        [isError]="isLoginError"
+      />
+      <input type="submit" />
+    </form>
+  </div>
+</div>

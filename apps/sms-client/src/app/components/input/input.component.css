@@ -1,0 +1,24 @@
+.input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 5px;
+}
+
+label {
+  align-self: flex-start;
+  color: var(--primary-color);
+}
+
+input {
+  padding: 8px;
+  width: 240px;
+  height: 20px;
+  border: solid 1px var(--primary-color);
+  border-radius: 8px;
+}
+
+.error {
+  border: solid 1px var(--error-color);
+}
