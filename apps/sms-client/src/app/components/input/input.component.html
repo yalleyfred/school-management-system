@@ -1,0 +1,10 @@
+<div class="input" [formGroup]="formGroup">
+  <label [for]="name">{{ label }}</label>
+  <input
+    [type]="name === 'password' ? 'password' : 'text'"
+    [class]="isError ? 'error' : ''"
+    [placeholder]="placeholder"
+    [name]="name"
+    [formControlName]="name"
+  />
+</div>
