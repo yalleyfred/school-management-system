@@ -1,0 +1,78 @@
+   +----------------+       +----------------+       +----------------+
+   |      User      |       |    Teacher     |       |    Course      |
+   +----------------+       +----------------+       +----------------+
+   | UserID (PK)    |       | TeacherID (PK) |       | CourseID (PK)  |
+   | Email (Unique) |       | Email (FK)     |       | CourseName     |
+   | Password (Hash)|       | FirstName      |       | Description    |
+   +----------------+       | LastName       |       | CreditHours    |
+          |                 | DateOfBirth    |       +----------------+
+          |                 | Gender         |           |
+          |                 | ContactNumber  |           |
+          |                 | Address        |           |
+          |                 | SubjectTaught  |           |
+          |                 +----------------+           |
+          |                         |                   |
+          v                         v                   |
+   +----------------+       +----------------+          |
+   |    Student     |       |    Admin       |          |
+   +----------------+       +----------------+          |
+   | StudentID (PK) |       | AdminID (PK)   |          |
+   | Email (FK)     |       | Email (FK)     |          |
+   | FirstName      |       | FirstName      |          |
+   | LastName       |       | LastName       |          |
+   | DateOfBirth    |       | ContactNumber  |          |
+   | Gender         |       | Address        |          |
+   | ContactNumber  |       +----------------+          |
+   | Address        |                                   |
+   +----------------+                                   |
+          |                                              |
+          |                                              |
+          v                                              |
+   +----------------+                                    |
+   |     Class      |                                    |
+   +----------------+                                    |
+   | ClassID (PK)   |                                    |
+   | ClassName      |                                    |
+   | Year           |                                    |
+   | Capacity       |                                    |
+   +----------------+                                    |
+                                                            |
+   +----------------+                                    |
+   |   Enrollment   |                                    |
+   +----------------+                                    |
+   | EnrollmentID   |                                    |
+   | StudentID (FK) |                                    |
+   | ClassID (FK)   |<-----------------------------------+
+   | EnrollmentDate |
+   +----------------+
+
+   +----------------+
+   |   Attendance   |
+   +----------------+
+   | AttendanceID   |
+   | StudentID (FK) |
+   | ClassID (FK)   |
+   | Date           |
+   | Status         |
+   +----------------+
+
+   +----------------+
+   |     Grade      |
+   +----------------+
+   | GradeID (PK)   |
+   | StudentID (FK) |
+   | CourseID (FK)  |
+   | Grade          |
+   +----------------+
+
+   +----------------+
+   |    Payment     |
+   +----------------+
+   | PaymentID (PK) |
+   | StudentID (FK) |
+   | PaymentDate    |
+   | Amount         |
+   | PaymentMethod  |
+   | TransactionRef |
+   | Description    |
+   +----------------+
