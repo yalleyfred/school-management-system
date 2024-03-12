@@ -1,5 +1,5 @@
 .side-bar {
-  height:  calc(100vh - 40px);
+  height:  var(--display-height);
   width: 20vw;
   max-width: 288px;
   display: flex;

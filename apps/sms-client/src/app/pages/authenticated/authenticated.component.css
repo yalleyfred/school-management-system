@@ -1,0 +1,6 @@
+.authenticated {
+  display: flex;
+  background-color: var(--bg-color);
+  gap: 20px;
+  padding: 20px;
+}

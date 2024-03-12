@@ -5,7 +5,7 @@ import { NxWelcomeComponent } from './nx-welcome.component';
 @Component({
   standalone: true,
   imports: [NxWelcomeComponent, RouterModule],
-  selector: 'school-management-system-root',
+  selector: 'sms-root',
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
