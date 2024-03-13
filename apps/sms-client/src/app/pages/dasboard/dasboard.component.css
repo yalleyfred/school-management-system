@@ -58,3 +58,14 @@
 .cal-info-btn:hover {
   cursor: pointer;
 }
+
+.graph {
+  height: 45%;
+  background-color: white;
+  margin-bottom: 20px;
+}
+
+.performance-atendance {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
