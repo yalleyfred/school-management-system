@@ -69,3 +69,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
+
+.table {
+  grid-column: span 2;
+}
