@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 type GridDates = Date | null;
+type Grid<T> = T[][];
 
 @Component({
   selector: 'sms-calendar',
@@ -15,7 +16,7 @@ export class CalendarComponent implements OnInit {
   public selectedYear = this.currentDate.getFullYear();
   public selectedMonth = this.currentDate.getMonth();
   public holidays: Date[] = [new Date('2024-01-01'), new Date('2024-12-25')];
-  public grid!: GridDates[][];
+  public grid!: Grid<GridDates>;
 
   public dayClicked(day: Date): void {
     console.log('Clicked on: ', day);
@@ -37,20 +38,20 @@ export class CalendarComponent implements OnInit {
     'December',
   ];
 
-  ngOnInit(): void {
+  public ngOnInit(): void {
     this.grid = this.generateCalendarGrid(
       this.selectedYear,
       this.selectedMonth,
     );
   }
 
-  generateCalendarGrid(year: number, month: number): GridDates[][] {
+  private generateCalendarGrid(year: number, month: number): Grid<GridDates> {
     const startDate = new Date(year, month, 1);
     const endDate = new Date(year, month + 1, 0);
     const numDays = endDate.getDate();
     const startDayOfWeek = startDate.getDay();
 
-    const grid: GridDates[][] = [[]];
+    const grid: Grid<GridDates> = [[]];
     let currentWeek = 0;
     for (let i = 1; i <= startDayOfWeek; i++) {
       grid[0].push(null);
@@ -67,7 +68,7 @@ export class CalendarComponent implements OnInit {
     return grid;
   }
 
-  prevMonth() {
+  public prevMonth(): void {
     if (this.selectedMonth === 0) {
       this.selectedYear -= 1;
       this.selectedMonth = 11;
@@ -78,10 +79,9 @@ export class CalendarComponent implements OnInit {
       this.selectedYear,
       this.selectedMonth,
     );
-
   }
 
-  nextMonth() {
+  public nextMonth(): void {
     if (this.selectedMonth === 11) {
       this.selectedYear += 1;
       this.selectedMonth = 0;
@@ -94,13 +94,11 @@ export class CalendarComponent implements OnInit {
     );
   }
 
-  isCurrentDate( day: GridDates) {
-    return this.currentDate.getDate() === day?.getDate() &&
+  public isCurrentDate(day: GridDates): boolean {
+    return (
+      this.currentDate.getDate() === day?.getDate() &&
       this.currentDate.getMonth() === day?.getMonth() &&
-      this.currentDate.getFullYear() === day?.getFullYear();
-  }
-
-  convertToDate(date: GridDates): date is Date {
-    return Boolean(date);
+      this.currentDate.getFullYear() === day?.getFullYear()
+    );
   }
 }
