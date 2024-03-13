@@ -2,13 +2,13 @@
   <div class="login-tab">
     <img src="./../../../favicon.ico" alt="logo" />
     <form [formGroup]="loginForm" (submit)="handleLoginSubmit()">
-      <school-management-system-input
+      <sms-input
         label="Username"
         name="username"
         [formGroup]="loginForm"
         [isError]="isLoginError"
       />
-      <school-management-system-input
+      <sms-input
         label="Password"
         name="password"
         [formGroup]="loginForm"

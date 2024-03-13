@@ -21,7 +21,7 @@
           "error",
           {
             "type": "element",
-            "prefix": "school-management-system",
+            "prefix": "sms",
             "style": "kebab-case"
           }
         ]

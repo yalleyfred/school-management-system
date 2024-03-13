@@ -10,7 +10,7 @@ import {
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'school-management-system-login',
+  selector: 'sms-login',
   standalone: true,
   imports: [CommonModule, InputComponent, ReactiveFormsModule],
   templateUrl: './login.component.html',
@@ -32,7 +32,7 @@ export class LoginComponent implements OnInit {
   public handleLoginSubmit(): void {
     if (this.loginForm.valid) {
       alert('Login successful');
-      this.router.navigateByUrl('/dashboard');
+      this.router.navigateByUrl('/');
     } else {
       this.loginForm.reset();
       this.isLoginError = true;

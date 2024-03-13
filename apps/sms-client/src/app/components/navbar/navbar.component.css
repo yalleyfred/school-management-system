@@ -1,0 +1,41 @@
+nav {
+  background-color: white;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.title {
+  font-size: xx-large;
+  font-weight: bolder;
+}
+
+div {
+  width: 75%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 20px;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  width: 90%;
+  padding: 0 8px;
+  border: solid 1px var(--bg-color);
+}
+
+input {
+  width: 80%;
+  outline: none;
+  border: none;
+}
+
+img {
+  height: 40px;
+  border-radius: 9999px;
+}

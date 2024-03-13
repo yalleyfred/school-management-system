@@ -1,0 +1,29 @@
+
+.tablet {
+    background-color: white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    padding: 0 20px;
+  }
+  
+  img {
+    height: 60px;
+    border-radius: 9999px;
+  }
+  
+  .tablet-data {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px 0;
+  }
+  
+  .tablet-data h1 {
+    margin: 0;
+  }
+  
+  .tablet-data p {
+    margin: 0;
+  }
