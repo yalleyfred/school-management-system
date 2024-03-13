@@ -17,10 +17,6 @@ export class CalendarComponent implements OnInit {
   public selectedMonth = this.currentDate.getMonth();
   public holidays: Date[] = [new Date('2024-01-01'), new Date('2024-12-25')];
   public grid!: Grid<GridDates>;
-
-  public dayClicked(day: Date): void {
-    console.log('Clicked on: ', day);
-  }
   public month = 'current month';
   public days = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'];
   public months = [
