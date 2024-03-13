@@ -22,8 +22,12 @@
 .calendar-container {
   display: flex;
   flex-direction: column;
-  padding: 20px;
+  
+}
+
+.calendar-content {
   background-color: white;
+  padding: 16px;
 }
 
 .events {
