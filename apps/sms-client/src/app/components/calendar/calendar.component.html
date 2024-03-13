@@ -1,0 +1,19 @@
+<div class="calendar rounded">
+  <div class="month">{{ months[currentDate.getMonth()] }} </div>
+  <div class="cal-row">
+    @for (day of days; track day) {
+      <span>{{ day }}</span>
+    }
+  </div>
+  @for (week of grid; track $index) {
+    <div class="cal-row">
+      @for (day of week; track day; let i = $index) {
+        @if (day?.getDate()) {
+          <span class="day {{currentDate.getDate()===day?.getDate()?'current-day':''}}">{{ day?.getDate() }}</span>
+        } @else {
+          <span class="day"></span>
+        }
+      }
+    </div>
+  }
+</div>

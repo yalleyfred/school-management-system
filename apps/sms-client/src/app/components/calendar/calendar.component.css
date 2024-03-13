@@ -1,0 +1,28 @@
+
+.calendar {
+  background-color: antiquewhite;
+  padding: 8px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.cal-row {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+}
+
+.day{
+    border-radius: 9999px;
+    height: 28px;
+    width: 28px;
+    padding: 2px;
+    display: grid;
+    place-items: center;
+}
+
+.current-day{
+    background-color: aqua;
+}
