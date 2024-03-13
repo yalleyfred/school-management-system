@@ -12,6 +12,8 @@ type GridDates = Date | null;
 })
 export class CalendarComponent implements OnInit {
   public currentDate: Date = new Date();
+  public selectedYear = this.currentDate.getFullYear();
+  public selectedMonth = this.currentDate.getMonth();
   public holidays: Date[] = [new Date('2024-01-01'), new Date('2024-12-25')];
   public grid!: GridDates[][];
 
@@ -36,11 +38,10 @@ export class CalendarComponent implements OnInit {
   ];
 
   ngOnInit(): void {
-    const [year, month] = [
-      this.currentDate.getFullYear(),
-      this.currentDate.getMonth(),
-    ];
-    this.grid = this.generateCalendarGrid(year, month);
+    this.grid = this.generateCalendarGrid(
+      this.selectedYear,
+      this.selectedMonth,
+    );
   }
 
   generateCalendarGrid(year: number, month: number): GridDates[][] {
@@ -63,8 +64,43 @@ export class CalendarComponent implements OnInit {
       }
       grid[currentWeek].push(currentDate);
     }
-    console.log(grid);
-
     return grid;
+  }
+
+  prevMonth() {
+    if (this.selectedMonth === 0) {
+      this.selectedYear -= 1;
+      this.selectedMonth = 11;
+    } else {
+      this.selectedMonth -= 1;
+    }
+    this.grid = this.generateCalendarGrid(
+      this.selectedYear,
+      this.selectedMonth,
+    );
+
+  }
+
+  nextMonth() {
+    if (this.selectedMonth === 11) {
+      this.selectedYear += 1;
+      this.selectedMonth = 0;
+    } else {
+      this.selectedMonth += 1;
+    }
+    this.grid = this.generateCalendarGrid(
+      this.selectedYear,
+      this.selectedMonth,
+    );
+  }
+
+  isCurrentDate( day: GridDates) {
+    return this.currentDate.getDate() === day?.getDate() &&
+      this.currentDate.getMonth() === day?.getMonth() &&
+      this.currentDate.getFullYear() === day?.getFullYear();
+  }
+
+  convertToDate(date: GridDates): date is Date {
+    return Boolean(date);
   }
 }

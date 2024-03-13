@@ -1,7 +1,6 @@
-
 .calendar {
-  background-color: antiquewhite;
-  padding: 8px;
+  background-color: var(--bg-color);
+  padding: 20px;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -14,15 +13,36 @@
   gap: 8px;
 }
 
-.day{
-    border-radius: 9999px;
-    height: 28px;
-    width: 28px;
-    padding: 2px;
-    display: grid;
-    place-items: center;
+.month-name {
+  color: var(--primary-color);
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.current-day{
-    background-color: aqua;
+.month-name h1{
+    font-size: small;
+}
+
+.month-name h1:hover{
+    cursor: pointer;
+}
+
+.day-names {
+  font-size: small;
+  color: grey;
+}
+
+.day {
+  border-radius: 9999px;
+  height: 28px;
+  width: 28px;
+  padding: 2px;
+  display: grid;
+  place-items: center;
+}
+
+.current-day {
+  background-color: aqua;
 }
