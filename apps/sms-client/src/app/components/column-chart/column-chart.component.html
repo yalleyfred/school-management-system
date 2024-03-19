@@ -1,1 +1,15 @@
-<p>column-chart works!</p>
+<div class="chart">
+    <ngx-charts-bar-vertical
+  [results]="[
+    { name: 'Students', value: 50 },
+    { name: 'Male', value: 30 },
+    { name: 'Female', value: 30 },
+    { name: 'Teachers', value: 30 },
+    { name: 'Male', value: 30 },
+    { name: 'Female', value: 30 },
+    { name: 'Graduates', value: 20 }
+  ]"
+  [yAxis]="true"
+  [xAxis]="true"
+></ngx-charts-bar-vertical>
+</div>
