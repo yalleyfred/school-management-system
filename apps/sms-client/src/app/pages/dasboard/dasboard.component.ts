@@ -5,6 +5,7 @@ import { CalendarComponent } from '../../components/calendar/calendar.component'
 import { EventTileComponent } from '../../components/event-tile/event-tile.component';
 import { TopPerfomerTableComponent } from '../../components/top-perfomer-table/top-perfomer-table.component';
 import { ColumnChartComponent } from '../../components/column-chart/column-chart.component';
+import { PieChartComponent } from '../../components/pie-chart/pie-chart.component';
 
 @Component({
   selector: 'sms-dasboard',
@@ -16,6 +17,7 @@ import { ColumnChartComponent } from '../../components/column-chart/column-chart
     EventTileComponent,
     TopPerfomerTableComponent,
     ColumnChartComponent,
+    PieChartComponent
   ],
   templateUrl: './dasboard.component.html',
   styleUrl: './dasboard.component.css',
