@@ -12,7 +12,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  padding: 20px 0;
+  padding-top: 12px;
 }
 
 .info {
@@ -24,4 +24,55 @@
   flex-direction: column;
 }
 
+.calendar-content {
+  background-color: white;
+  padding: 16px;
+}
 
+.events {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding-bottom: 20px;
+}
+
+.cal-info {
+  background-color: var(--primary-color);
+  margin-top: 20px;
+  padding: 12px 16px;
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.cal-info p {
+  color: white;
+}
+
+.cal-info-btn {
+  padding: 8px;
+  background-color: white;
+  color: var(--primary-color);
+  border: none;
+  width: 60%;
+}
+
+.cal-info-btn:hover {
+  cursor: pointer;
+}
+
+.graph {
+  height: 45%;
+  background-color: white;
+  margin-bottom: 20px;
+}
+
+.performance-atendance {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.table {
+  grid-column: span 2;
+}

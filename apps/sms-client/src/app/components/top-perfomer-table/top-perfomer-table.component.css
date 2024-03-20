@@ -1,0 +1,41 @@
+.container {
+  padding: 16px;
+  background-color: white;
+}
+
+.tabs {
+  display: flex;
+  justify-content: flex-start;
+}
+.tabs span {
+  padding: 0 8px;
+}
+.thead {
+  color: grey;
+  font-size: small;
+  margin-top: 4px;
+}
+.tbody {
+  color: var(--primary-color);
+  font-size: small;
+}
+
+.trow {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+  padding: 4px 0;
+  justify-items: center;
+}
+.name,
+.rank {
+  grid-column: span 2;
+}
+
+.id-number-data {
+  color: grey;
+}
+
+.trow img{
+    height: 24px;
+}

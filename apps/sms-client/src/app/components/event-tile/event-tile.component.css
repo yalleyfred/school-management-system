@@ -1,0 +1,18 @@
+.tile {
+  background-color: var(--bg-color);
+  padding: 2px 4px;
+}
+
+p {
+  color: grey;
+  font-size: small;
+}
+
+.event-detail {
+  height: fit-content;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2px;
+  font-size: medium;
+}
