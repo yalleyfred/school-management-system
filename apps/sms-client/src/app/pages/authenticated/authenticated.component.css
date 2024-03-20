@@ -1,6 +1,12 @@
 .authenticated {
-  display: flex;
+  display: grid;
+  grid-template-columns: 20% 1fr;
   background-color: var(--bg-color);
-  gap: 20px;
-  padding: 20px;
+  gap: var(--space);
+  padding: var(--space);
+}
+
+.routes{
+  height: var(--display-height);
+  overflow: auto;
 }

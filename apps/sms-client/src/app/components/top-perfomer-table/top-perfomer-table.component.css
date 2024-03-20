@@ -1,6 +1,8 @@
 .container {
-  padding: 16px;
+  height: calc(100% - (2*var(--space)));
+  padding: var(--space);
   background-color: white;
+  margin-bottom: var(--space);
 }
 
 .tabs {

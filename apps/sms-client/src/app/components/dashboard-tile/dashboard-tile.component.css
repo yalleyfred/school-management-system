@@ -4,8 +4,8 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    gap: 20px;
-    padding: 0 20px;
+    gap: var(--space);
+    padding: 20px;
   }
   
   img {
@@ -17,7 +17,6 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 20px 0;
   }
   
   .tablet-data h1 {

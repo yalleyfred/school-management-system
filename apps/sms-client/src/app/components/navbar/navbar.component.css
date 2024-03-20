@@ -1,10 +1,11 @@
 nav {
+  height: 70px;
   background-color: white;
-  padding: 0 20px;
+  padding: 0 var(--space);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 
 .title {
@@ -17,7 +18,7 @@ div {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  gap: 20px;
+  gap: var(--space)
 }
 
 .search-container {
