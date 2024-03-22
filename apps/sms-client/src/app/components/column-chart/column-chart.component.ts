@@ -30,6 +30,7 @@ export class ColumnChartComponent implements OnInit, AfterViewInit {
   public yValues = signal<number[]>([]);
   public xValues = signal<number[]>([]);
   public keys = signal<string[]>([]);
+  public colors=['#445569','bisque']
 
   public ngOnInit(): void {
     this.getDataValues();
