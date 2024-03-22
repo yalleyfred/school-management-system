@@ -1,12 +1,17 @@
 .authenticated {
+  max-width: 1440px;
+  margin: auto;
   display: grid;
   grid-template-columns: 20% 1fr;
-  background-color: var(--bg-color);
   gap: var(--space);
   padding: var(--space);
 }
 
-.routes{
+.canvas {
+  background-color: var(--bg-color);
+}
+
+.routes {
   height: var(--display-height);
   overflow: auto;
 }

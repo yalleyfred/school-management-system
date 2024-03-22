@@ -2,7 +2,6 @@
   height: calc(100% - (2*var(--space)));
   padding: var(--space);
   background-color: white;
-  margin-bottom: var(--space);
 }
 
 .tabs {
@@ -38,6 +37,6 @@
   color: grey;
 }
 
-.trow img{
-    height: 24px;
+.trow img {
+  height: 24px;
 }

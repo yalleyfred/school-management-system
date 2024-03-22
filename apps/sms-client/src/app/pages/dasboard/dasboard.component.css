@@ -1,5 +1,5 @@
 .dashboard {
-  min-width: var(--dash-width);
+  max-width: var(--dash-width);
 }
 
 .categories {
@@ -72,13 +72,14 @@
   height: calc(40% - var(--space));
   display: grid;
   gap: var(--space);
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(5, 1fr);
 }
 
 .table {
-  grid-column: span 2;
+  grid-column: span 3;
 }
 
 .pie-chart{
+  grid-column: span 2;
   background-color: white;
 }
