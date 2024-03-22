@@ -16,7 +16,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './column-chart.component.css',
 })
 export class ColumnChartComponent implements OnInit, AfterViewInit {
-  @ViewChild('svg') svg!: ElementRef;
+  @ViewChild('svg') private svg!: ElementRef;
   private svgHeight = 0;
   private largestValue = 0;
   private data: { [key: string]: number } = {
