@@ -39,7 +39,6 @@ export class ColumnChartComponent implements OnInit, AfterViewInit {
   private getDataValues(): void {
     this.keys.set(Object.keys(this.data));
     this.heights.set(Object.values(this.data));
-    this.yValues.set(Object.values(this.data));
     this.yValues.set(Array(Object.values(this.data).length).fill(0));
     this.largestValue = Math.max(...this.heights());
   }

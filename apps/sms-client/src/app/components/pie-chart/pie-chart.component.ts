@@ -9,7 +9,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './pie-chart.component.css',
 })
 export class PieChartComponent {
-  public total = 500;
-  public teachers = 200;
-  public students = 300;
+  public teachers = 600;
+  public students = 700;
+  public total = this.teachers+this.students;
 }
