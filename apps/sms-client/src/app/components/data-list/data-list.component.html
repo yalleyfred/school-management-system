@@ -1,5 +1,14 @@
 <div class="list-container rounded">
-    <sms-data-item/>
-    <sms-data-item [isSelected]="true"/>
-    <sms-data-item/>
+  <div class="title">
+    <h3>{{ getPageName() | titlecase }}</h3>
+    <sms-search
+      placeholder="Search for student or ID"
+      class="search-container"
+    />
+  </div>
+  <div class="list">
+    @for (item of tempArray; track $index) {
+      <sms-data-item [isSelected]="selectedItem === item" (click)="handleItemClick(item)" />
+    }
+  </div>
 </div>
