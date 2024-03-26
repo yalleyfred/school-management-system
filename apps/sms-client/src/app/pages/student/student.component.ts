@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { DataListComponent } from '../../components/data-list/data-list.component';
 
 @Component({
-  selector: 'school-management-system-student',
+  selector: 'sms-student',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, DataListComponent],
   templateUrl: './student.component.html',
   styleUrl: './student.component.css',
 })

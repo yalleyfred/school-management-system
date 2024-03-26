@@ -1,0 +1,8 @@
+.list-container {
+  background-color: white;
+  width: 100%;
+  padding: 10px 0;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+}
