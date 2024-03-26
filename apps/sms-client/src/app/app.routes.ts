@@ -8,16 +8,21 @@ export const appRoutes: Route[] = [
   },
   {
     path: '',
+    pathMatch: 'full',
+    redirectTo: '/dashboard',
+  },
+  {
+    path: 'dashboard',
     loadComponent: () =>
       import('./pages/authenticated/authenticated.component').then(
-        (m) => m.AuthenticatedComponent
+        (m) => m.AuthenticatedComponent,
       ),
     children: [
       {
         path: '',
         loadComponent: () =>
           import('./pages/dasboard/dasboard.component').then(
-            (m) => m.DasboardComponent
+            (m) => m.DasboardComponent,
           ),
       },
     ],
