@@ -7,7 +7,7 @@
   --space: 16px;
   --display-height: calc(100vh - 40px);
   --dash-width: calc(1440px - 120px);
-  --dash-height: calc(100vh - (70px + (3 * var(--space))));
+  --dash-height: calc(100vh - (70px + (4 * var(--space))));
 }
 
 ::-webkit-scrollbar {
