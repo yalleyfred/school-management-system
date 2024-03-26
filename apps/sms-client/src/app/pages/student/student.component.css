@@ -2,5 +2,9 @@
   display: grid;
   grid-template-columns: 1fr 2fr;
   gap: var(--space);
+}
+
+.list {
   height: var(--dash-height);
+  overflow: hidden;
 }

@@ -3,7 +3,7 @@ p,h3{
 }
 .item-container {
   padding: 10px;
-  border-bottom: solid 1px var(--primary-color);
+  border-bottom: solid 2px var(--bg-color);
   display: grid;
   grid-template-columns: 1fr 3fr 2fr 1fr;
   align-items: center;
