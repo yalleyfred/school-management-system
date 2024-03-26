@@ -1,13 +1,7 @@
 <nav class="rounded">
-  <h1 class="title">{{getPageName()|titlecase}}</h1>
+  <h1 class="title">{{ getPageName() | titlecase }}</h1>
   <div>
-    <span class="search-container rounded">
-      <input
-        type="search"
-        placeholder="Search for students/teachers/documents..."
-      />
-    </span>
-
+    <sms-search placeholder="Search for students/teachers/documents..." class="search-container" />
     <span>not</span>
     <img src="./../../../assets/images/default-profile.png" alt="profile" />
   </div>

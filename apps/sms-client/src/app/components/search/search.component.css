@@ -5,6 +5,8 @@ input {
 }
 
 .search-container {
+  width: 90%;
+  height: 40px;
   display: flex;
   align-items: center;
   padding: 0 8px;
