@@ -1,7 +1,3 @@
-.dashboard {
-  min-width: var(--dash-width);
-}
-
 .categories {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
