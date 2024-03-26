@@ -31,7 +31,6 @@ export class LoginComponent implements OnInit {
 
   public handleLoginSubmit(): void {
     if (this.loginForm.valid) {
-      alert('Login successful');
       this.router.navigateByUrl('/');
     } else {
       this.loginForm.reset();

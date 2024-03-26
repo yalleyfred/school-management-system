@@ -1,0 +1,17 @@
+<div class="chart">
+  <svg width="800" height="200" #svg>
+    @for (key of keys(); track key) {
+      <rect
+        ry="3"
+        [attr.fill]="colors[$index % colors.length]"
+        [attr.x]="xValues()[$index]"
+        [attr.y]="yValues()[$index]"
+        [attr.width]="barWidth"
+        [attr.height]="heights()[$index]"
+      ></rect>
+      <text [attr.x]="xValues()[$index]" [attr.y]="yValues()[$index] - 5">
+        {{ keys()[$index] }}
+      </text>
+    }
+  </svg>
+</div>

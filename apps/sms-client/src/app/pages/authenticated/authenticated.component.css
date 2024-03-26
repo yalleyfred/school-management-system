@@ -1,6 +1,17 @@
 .authenticated {
-  display: flex;
+  max-width: 1440px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 20% 1fr;
+  gap: var(--space);
+  padding: var(--space);
+}
+
+.canvas {
   background-color: var(--bg-color);
-  gap: 20px;
-  padding: 20px;
+}
+
+.routes {
+  height: var(--display-height);
+  overflow: auto;
 }
