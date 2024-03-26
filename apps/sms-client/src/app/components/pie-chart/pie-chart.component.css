@@ -1,0 +1,44 @@
+.pie-chart {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  gap: 40px;
+  padding: 10px;
+}
+
+svg {
+  border-radius: 9999px;
+  height: 50%;
+  margin: auto;
+}
+
+circle {
+  fill: white;
+  stroke-width: 3px;
+}
+
+.big-circle {
+  stroke: var(--primary-color);
+}
+
+.left {
+  stroke: white;
+}
+
+.small-circle {
+  stroke: bisque;
+}
+
+.attendance {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  grid-template-columns: repeat(2, 1fr);
+  justify-self: flex-end;
+  text-align: center;
+}
+
+.attendance div h3,
+.attendance div p {
+  margin: 0;
+}

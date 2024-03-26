@@ -1,13 +1,13 @@
 .categories {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+  gap: var(--space)
 }
 
 .details {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  gap: var(--space);
   padding-top: 12px;
 }
 
@@ -22,22 +22,22 @@
 
 .calendar-content {
   background-color: white;
-  padding: 16px;
+  padding: var(--space);
 }
 
 .events {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  padding-bottom: 20px;
+  gap: var(--space);
+  padding-bottom: var(--space);
 }
 
 .cal-info {
   background-color: var(--primary-color);
-  margin-top: 20px;
-  padding: 12px 16px;
+  margin-top: var(--space);
+  padding: var(--space);
   display: flex;
-  gap: 16px;
+  gap: var(--space);
   flex-direction: column;
   justify-content: space-between;
 }
@@ -59,16 +59,23 @@
 }
 
 .graph {
-  height: 45%;
+  height: 60%;
   background-color: white;
-  margin-bottom: 20px;
+  margin-bottom: var(--space);
 }
 
 .performance-atendance {
+  height: calc(40% - var(--space));
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space);
+  grid-template-columns: repeat(5, 1fr);
 }
 
 .table {
+  grid-column: span 3;
+}
+
+.pie-chart{
   grid-column: span 2;
+  background-color: white;
 }

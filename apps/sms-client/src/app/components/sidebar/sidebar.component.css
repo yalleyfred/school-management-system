@@ -1,12 +1,10 @@
 .side-bar {
   height:  var(--display-height);
-  width: 20vw;
-  max-width: 288px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   background-color: var(--primary-color);
-  padding: 0 20px;
+  padding: 0 var(--space);
 }
 
 .sidebar-top {
@@ -15,17 +13,25 @@
 }
 
 .logo-container {
-  display: grid;
-  place-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space);
   border-bottom: solid 1px gray;
   padding: 20px 0px 40px 0px;
+  color: white;
+}
+
+.logo-container img{
+  height: 40px;
+  border-radius: 10px;
 }
 
 .sidebar-options,.sidebar-buttom {
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  padding: 20px;
+  gap: var(--space);
+  padding: var(--space);
 }
 
 a {

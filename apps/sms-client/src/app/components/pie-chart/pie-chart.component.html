@@ -1,0 +1,31 @@
+<div class="pie-chart rounded">
+  <svg width="200" height="200">
+    <circle
+      cx="50%"
+      cy="50%"
+      r="30%"
+      stroke-dasharray="377"
+      [attr.stroke-dashoffset]="(teachers/total)*377"
+      class="big-circle"
+    />
+
+    <circle
+      cx="50%"
+      cy="50%"
+      r="20%"
+      stroke-dasharray="252"
+      [attr.stroke-dashoffset]="(students/total)*377"
+      class="small-circle"
+    />
+  </svg>
+  <div class="attendance">
+    <div>
+      <p>students</p>
+      <h3>80%</h3>
+    </div>
+    <div>
+      <p>teachers</p>
+      <h3>90%</h3>
+    </div>
+  </div>
+</div>

@@ -1,5 +1,6 @@
 .container {
-  padding: 16px;
+  height: calc(100% - (2*var(--space)));
+  padding: var(--space);
   background-color: white;
 }
 
@@ -36,6 +37,6 @@
   color: grey;
 }
 
-.trow img{
-    height: 24px;
+.trow img {
+  height: 24px;
 }
