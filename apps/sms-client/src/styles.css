@@ -30,6 +30,7 @@
 
 body {
   margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .rounded {
@@ -39,5 +40,5 @@ body {
 .pages {
   max-width: var(--dash-width);
   height: var(--dash-height);
-  /* overflow: auto; */
+  overflow: auto;
 }
