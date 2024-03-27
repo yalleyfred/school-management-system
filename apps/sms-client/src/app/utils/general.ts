@@ -1,1 +1,1 @@
-export const getCurrentPage = (url: string) => url.split('/').pop();
+export const getCurrentPage = (url: string):string => url.split('/').pop()??'';
