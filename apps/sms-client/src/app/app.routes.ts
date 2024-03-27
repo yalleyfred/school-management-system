@@ -8,16 +8,28 @@ export const appRoutes: Route[] = [
   },
   {
     path: '',
+    pathMatch: 'full',
+    redirectTo: '/dashboard',
+  },
+  {
+    path: '',
     loadComponent: () =>
       import('./pages/authenticated/authenticated.component').then(
-        (m) => m.AuthenticatedComponent
+        (m) => m.AuthenticatedComponent,
       ),
     children: [
       {
-        path: '',
+        path: 'dashboard',
         loadComponent: () =>
           import('./pages/dasboard/dasboard.component').then(
-            (m) => m.DasboardComponent
+            (m) => m.DasboardComponent,
+          ),
+      },
+      {
+        path: 'students',
+        loadComponent: () =>
+          import('./pages/student/student.component').then(
+            (m) => m.StudentComponent,
           ),
       },
     ],

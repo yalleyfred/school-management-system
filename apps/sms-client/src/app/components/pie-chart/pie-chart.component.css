@@ -10,6 +10,7 @@ svg {
   border-radius: 9999px;
   height: 50%;
   margin: auto;
+  transform: rotateZ(-90deg);
 }
 
 circle {

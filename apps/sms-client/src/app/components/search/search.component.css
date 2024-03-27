@@ -1,0 +1,14 @@
+input {
+  width: 80%;
+  outline: none;
+  border: none;
+}
+
+.search-container {
+  width: 90%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  padding: 0 8px;
+  border: solid 1px var(--bg-color);
+}

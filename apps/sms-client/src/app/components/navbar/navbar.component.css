@@ -8,9 +8,9 @@ nav {
   margin-bottom: 16px;
 }
 
-.title {
-  font-size: xx-large;
-  font-weight: bolder;
+img {
+  height: 40px;
+  border-radius: 9999px;
 }
 
 div {
@@ -18,25 +18,15 @@ div {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  gap: var(--space)
+  gap: var(--space);
+}
+
+.title {
+  font-size: xx-large;
+  font-weight: bolder;
 }
 
 .search-container {
-  display: flex;
-  align-items: center;
-  height: 40px;
   width: 90%;
-  padding: 0 8px;
-  border: solid 1px var(--bg-color);
 }
 
-input {
-  width: 80%;
-  outline: none;
-  border: none;
-}
-
-img {
-  height: 40px;
-  border-radius: 9999px;
-}
