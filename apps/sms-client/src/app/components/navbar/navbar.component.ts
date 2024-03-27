@@ -14,7 +14,7 @@ import { SearchComponent } from '../search/search.component';
 export class NavbarComponent {
   private router = inject(Router);
 
-  public getPageName() {
+  public getPageName():string {
     return getCurrentPage(this.router.url);
   }
 }
