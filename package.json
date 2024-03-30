@@ -4,9 +4,9 @@
   "license": "MIT",
   "scripts": {
     "start:frontend": "nx serve sms-client",
-    "start:backend": "nx serve sms-server",
+    "start:services": "nx serve sms-server",
     "build:frontend": "nx build sms-client",
-    "build:backend": "nx build sms-server",
+    "build:services": "nx build sms-server",
     "lint": "nx run-many --target=lint --all",
     "lint:fix": "nx run-many --target=lint --fix --all",
     "test": "nx run-many --target=test --all",
@@ -27,11 +27,15 @@
     "@nestjs/common": "^10.0.2",
     "@nestjs/core": "^10.0.2",
     "@nestjs/platform-express": "^10.0.2",
+    "@nestjs/typeorm": "^10.0.2",
     "@nrwl/angular": "^18.0.6",
     "axios": "^1.6.0",
+    "class-validator": "^0.14.1",
+    "pg": "^8.11.3",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^7.8.0",
     "tslib": "^2.3.0",
+    "typeorm": "^0.3.20",
     "zone.js": "~0.14.3"
   },
   "devDependencies": {
