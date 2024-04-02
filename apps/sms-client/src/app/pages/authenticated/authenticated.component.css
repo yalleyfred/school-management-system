@@ -13,5 +13,6 @@
 
 .routes {
   height: var(--display-height);
-  overflow: auto;
+  width: var(--display-width);
 }
+

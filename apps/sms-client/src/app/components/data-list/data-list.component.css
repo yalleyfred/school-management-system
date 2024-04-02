@@ -1,0 +1,20 @@
+.list-container {
+  background-color: white;
+  padding: 10px 0;
+  height: var(--dash-height);
+  overflow: auto;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  padding: 0 5px;
+}
+
+.title {
+  padding: 0 10px;
+  padding-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  border-bottom: solid 2px var(--bg-color);
+}

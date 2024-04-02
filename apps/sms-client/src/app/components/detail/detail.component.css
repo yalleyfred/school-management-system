@@ -1,0 +1,49 @@
+h4{
+    color: var(--primary-color);
+}
+
+.detail {
+  background-color: white;
+}
+
+.header {
+  background-color: var(--primary-color);
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  color: white;
+}
+
+.header img{
+    height: 80px;
+    border-radius: 9999px;
+}
+
+.detail-data{
+    margin: 25px;
+    margin-bottom: 0;
+    border: solid 2px var(--bg-color);
+    padding: 10px;
+}
+
+.top-details{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.detail-title{
+    font-size: small;
+    color: gray;
+    margin: 0;
+}
+
+.detail-info{
+    color: var(--primary-color);
+    font-weight: bold;
+    margin-top: 0;
+}
+
+.bottom-first-info{
+    margin-bottom: 0;
+}

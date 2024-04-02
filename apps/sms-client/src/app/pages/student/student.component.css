@@ -1,0 +1,18 @@
+.students {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: var(--space);
+  height: calc(var(--dash-height));
+}
+
+.list {
+ 
+  overflow: hidden;
+}
+
+.detail{
+  width: 100%;
+  background-color: white;
+  height: 100%;
+  overflow: hidden;
+}

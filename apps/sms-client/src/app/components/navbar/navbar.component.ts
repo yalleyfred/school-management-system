@@ -1,11 +1,20 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
+import { getCurrentPage } from '../../utils/general';
+import { SearchComponent } from '../search/search.component';
 
 @Component({
   selector: 'sms-navbar',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, SearchComponent],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css',
 })
-export class NavbarComponent {}
+export class NavbarComponent {
+  private router = inject(Router);
+
+  public getPageName():string {
+    return getCurrentPage(this.router.url);
+  }
+}

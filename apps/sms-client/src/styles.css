@@ -7,10 +7,11 @@
   --space: 16px;
   --display-height: calc(100vh - 40px);
   --dash-width: calc(1440px - 120px);
+  --dash-height: calc(100vh - (70px + (4 * var(--space))));
 }
 
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 5px;
 }
 
 ::-webkit-scrollbar-track {
@@ -19,7 +20,7 @@
 
 ::-webkit-scrollbar-thumb {
   background: rgba(128, 128, 128, 0.25);
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -29,57 +30,15 @@
 
 body {
   margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .rounded {
   border-radius: 8px;
 }
 
-.cal-month-view {
-  background-color: #44556957 !important;
-
-  border-radius: 20px;
-  overflow: clip;
-  min-height: none !important;
-
-  align-items: center;
-  color: var(--primary-color);
-}
-
-.cal-header {
-  color: var(--primary-color);
-}
-
-.cal-month-view .cal-day-cell {
-  min-height: 32px !important;
-  width: 32px;
-}
-
-.cal-cell-row {
-  gap: 1px;
-}
-
-.cal-cell {
-  height: 40px;
-  display: flex;
-}
-
-.cal-cell-top {
-  min-height: 40px !important;
-  border-radius: 9999px;
-}
-.ng-star-inserted {
-  height: 40px;
-}
-
-.cal-month-view .cal-day-cell.cal-today {
-  background: var(--primary-color);
-  color: white;
-  border: solid;
-  border-radius: 9999px;
-  padding-bottom: 8px;
-}
-
-.cal-month-view .cal-day-cell:not(:last-child) {
-  border: none;
+.pages {
+  max-width: var(--dash-width);
+  height: var(--dash-height);
+  overflow: auto;
 }
