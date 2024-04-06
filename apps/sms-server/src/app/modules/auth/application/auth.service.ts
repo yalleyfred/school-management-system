@@ -30,12 +30,12 @@ export class AuthService {
 
 
   public async signUp(dto: NewUserDTO): Promise<any> {
-    const hash = await bcrypt.hash(dto.password, 10);
+    const hash = await bcrypt.hash(dto.hash, 10);
 
     const user = await this.userService
       .create({
         email: dto.email,
-        password: hash,
+        hash,
         firstName: dto.firstName || '',
         lastName: dto.lastName || '',
         role: dto.role || '',

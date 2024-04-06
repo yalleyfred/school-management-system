@@ -15,7 +15,7 @@ export class NewUserDTO {
 
   @IsNotEmpty()
   @IsString()
-  password: string;
+  hash: string;
 
   @IsNotEmpty()
   @IsString()
