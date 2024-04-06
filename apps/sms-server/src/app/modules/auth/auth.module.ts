@@ -9,6 +9,7 @@ import { UserService } from '../user/application/user.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { UserEntity } from '../../domain/entities/user.entity';
 import { AuthTokenStrategy } from '../../shared/strategies/auth-token.strategy';
+import { RefreshTokenStrategy } from '../../shared/strategies/refresh-token.strategy';
 
 @Module({
   imports: [
@@ -21,6 +22,6 @@ import { AuthTokenStrategy } from '../../shared/strategies/auth-token.strategy';
     TypeOrmModule.forFeature([UserEntity]),
   ],
   controllers: [AuthController],
-  providers: [AuthService, UserService, JwtService, AuthTokenStrategy], 
+  providers: [AuthService, UserService, JwtService, AuthTokenStrategy, RefreshTokenStrategy], 
 })
 export class AuthModule {}
