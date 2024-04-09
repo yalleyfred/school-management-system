@@ -1,0 +1,31 @@
+#!/bin/bash
+
+# Run linting, tests, and builds on affected files
+echo "Starting linting"
+nx affected:lint --base=main
+# Check if any of the commands failed
+if [ $? -ne 0 ]; then
+  echo "Linting failed. Aborting push."
+  exit 1
+fi
+echo "Linting passed"
+
+echo "Starting tests"
+nx affected:test --base=main
+ if [ $? -ne 0 ]; then
+  echo "Test failed. Aborting push."
+  exit 1
+fi
+echo "Tests passed"
+
+echo "Starting build"
+nx affected:build --base=main
+if [ $? -ne 0 ]; then
+  echo "Build failed. Aborting push."
+  exit 1
+fi
+echo "Build passed"
+
+# If all commands passed, allow the push
+echo "Passed all test"
+exit 0
