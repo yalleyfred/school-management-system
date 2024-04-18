@@ -7,7 +7,9 @@ import {
   ReactiveFormsModule,
   Validators,
 } from '@angular/forms';
-import { Router } from '@angular/router';
+import { Store } from '@ngrx/store';
+import { authActions } from '../../store/auth.slice';
+import { ISignup } from '../../store/store.interface';
 
 @Component({
   selector: 'sms-signup',
@@ -17,10 +19,10 @@ import { Router } from '@angular/router';
   styleUrl: './signup.component.css',
 })
 export class SignupComponent implements OnInit {
+  private formBuilder: FormBuilder = inject(FormBuilder);
+  private store: Store = inject(Store);
   public signupForm!: FormGroup;
   public isSignupError = false;
-  private formBuilder: FormBuilder = inject(FormBuilder);
-  private router: Router = inject(Router);
 
   public ngOnInit(): void {
     this.signupForm = this.formBuilder.group({
@@ -33,7 +35,12 @@ export class SignupComponent implements OnInit {
 
   public handleSignupSubmit(): void {
     if (this.signupForm.valid) {
-      this.router.navigateByUrl('/login');
+      const signup: ISignup = this.signupForm.value;
+      this.store.dispatch(
+        authActions.triggerSignup({
+          signup,
+        }),
+      );
     } else {
       this.isSignupError = true;
     }
