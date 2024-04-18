@@ -2,7 +2,7 @@ import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 import { getCurrentPage } from '../../utils/general';
-import { SearchComponent } from '../search/search.component';
+import { SearchComponent } from '../shared/search/search.component';
 
 @Component({
   selector: 'sms-navbar',
@@ -14,7 +14,7 @@ import { SearchComponent } from '../search/search.component';
 export class NavbarComponent {
   private router = inject(Router);
 
-  public getPageName():string {
+  public getPageName(): string {
     return getCurrentPage(this.router.url);
   }
 }
