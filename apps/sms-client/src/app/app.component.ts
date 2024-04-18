@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { NxWelcomeComponent } from './nx-welcome.component';
+import { AlertComponent } from './components/shared/alert/alert.component';
 
 @Component({
   standalone: true,
-  imports: [NxWelcomeComponent, RouterModule],
+  imports: [ RouterModule, AlertComponent],
   selector: 'sms-root',
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
