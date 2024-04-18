@@ -8,6 +8,8 @@ import {
   Validators,
 } from '@angular/forms';
 import { Router } from '@angular/router';
+import { Store } from '@ngrx/store';
+import { authActions } from '../../store/auth.slice';
 
 @Component({
   selector: 'sms-login',
@@ -17,21 +19,23 @@ import { Router } from '@angular/router';
   styleUrl: './login.component.css',
 })
 export class LoginComponent implements OnInit {
-  public loginForm!: FormGroup;
-  public isLoginError = false;
   private formBuilder: FormBuilder = inject(FormBuilder);
   private router: Router = inject(Router);
+  private store: Store = inject(Store);
+  public loginForm!: FormGroup;
+  public isLoginError = false;
 
   public ngOnInit(): void {
     this.loginForm = this.formBuilder.group({
-      username: ['', [Validators.required]],
+      email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required]],
     });
   }
 
   public handleLoginSubmit(): void {
     if (this.loginForm.valid) {
-      this.router.navigateByUrl('/');
+      const login = this.loginForm.value;
+      this.store.dispatch(authActions.triggerLogin(login));
     } else {
       this.loginForm.reset();
       this.isLoginError = true;
