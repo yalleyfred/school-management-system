@@ -1,1 +1,4 @@
-<router-outlet></router-outlet> <sms-alert />
+<router-outlet></router-outlet>
+@if (alert | async; as alertData) {
+  <sms-alert [message]="alertData.message" [type]="alertData.type" />
+}

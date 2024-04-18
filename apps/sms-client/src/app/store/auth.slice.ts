@@ -6,6 +6,7 @@ import { catchError, exhaustMap, map, of, tap } from 'rxjs';
 import { IAuth, ILogin, ISignup } from './store.interface';
 import { initailState } from './store.state';
 import { Router } from '@angular/router';
+import { AlertService } from '../services/alert/alert.service';
 
 const TRIGGER_SIGNUP = '[SIGNUP] trigger signup';
 const TRIGGER_LOGIN = '[LOGIN] trigger login';
@@ -26,15 +27,19 @@ export class AuthEffects {
   private apiService = inject(ApiService);
   private actions = inject(Actions);
   private router = inject(Router);
+  private alert = inject(AlertService);
 
   public triggerSignup = createEffect(() =>
     this.actions.pipe(
       ofType(authActions.triggerSignup),
       exhaustMap((signupData) =>
         this.apiService.signup(signupData.signup).pipe(
-          tap(() => this.router.navigateByUrl('/dashboard')),
+          tap(() => {
+            this.alert.triggerAlert('Account created', 'success');
+            this.router.navigateByUrl('/dashboard');
+          }),
           catchError((error) => {
-            //trigger error
+            this.alert.triggerAlert('Sign up failed', 'error');
             return of(error);
           }),
         ),
@@ -52,7 +57,7 @@ export class AuthEffects {
             return authActions.triggerSaveAuth({ auth: res.data });
           }),
           catchError((error) => {
-            //trigger error
+            this.alert.triggerAlert('Login failed', 'error');
             return of(error);
           }),
         ),
