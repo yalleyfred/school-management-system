@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { DasboardComponent } from './dasboard.component';
-import { DashboardTileComponent } from '../../components/dashboard-tile/dashboard-tile.component';
-import { CalendarComponent } from '../../components/calendar/calendar.component';
+import { DashboardTileComponent } from '../../components/dashboard/dashboard-tile/dashboard-tile.component';
+import { CalendarComponent } from '../../components/dashboard/calendar/calendar.component';
 
 describe('DasboardComponent', () => {
   let component: DasboardComponent;

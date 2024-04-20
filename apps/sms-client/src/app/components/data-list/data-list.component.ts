@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { DataItemComponent } from '../data-item/data-item.component';
 import { Router } from '@angular/router';
 import { getCurrentPage } from '../../utils/general';
-import { SearchComponent } from '../search/search.component';
+import { SearchComponent } from '../shared/search/search.component';
 import { filter, fromEvent, map } from 'rxjs';
 import { Destroyer } from '../../utils/destroyer';
 
@@ -19,7 +19,7 @@ export class DataListComponent extends Destroyer implements OnInit, OnDestroy {
   public getPageName() {
     return getCurrentPage(this.router.url);
   }
-  public tempArray = [1, 2, 3, 4, 5, 6, 7, 8, 9,10];
+  public tempArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
   public selectedItem: number | null = null;
 
   public ngOnInit(): void {

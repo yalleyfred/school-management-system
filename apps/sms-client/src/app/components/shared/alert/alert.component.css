@@ -1,0 +1,30 @@
+.alert {
+  color: whitesmoke;
+  text-align: center;
+  padding: 0 20px;
+  position: absolute;
+  min-width: 200px;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: top-down ease-in-out 1s;
+}
+
+.error {
+  background-color: salmon;
+}
+
+.success {
+  background: lightgreen;
+}
+
+@keyframes top-down {
+  from {
+    opacity: 0;
+    top: 10%;
+  }
+  to {
+    opacity: 1;
+    top: 10px;
+  }
+}

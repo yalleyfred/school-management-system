@@ -3,8 +3,8 @@
     <img src="./../../../favicon.ico" alt="logo" />
     <form [formGroup]="loginForm" (submit)="handleLoginSubmit()">
       <sms-input
-        label="Username"
-        name="username"
+        label="Email"
+        name="email"
         [formGroup]="loginForm"
         [isError]="isLoginError"
       />

@@ -1,0 +1,31 @@
+<div class="signup-main">
+  <div class="signup-tab">
+    <img src="./../../../favicon.ico" alt="logo" />
+    <form [formGroup]="signupForm" (submit)="handleSignupSubmit()">
+      <sms-input
+        label="First Name"
+        name="firstName"
+        [formGroup]="signupForm"
+        [isError]="isSignupError"
+      /><sms-input
+        label="Last Name"
+        name="lastName"
+        [formGroup]="signupForm"
+        [isError]="isSignupError"
+      />
+      <sms-input
+        label="Email"
+        name="email"
+        [formGroup]="signupForm"
+        [isError]="isSignupError"
+      />
+      <sms-input
+        label="Password"
+        name="password"
+        [formGroup]="signupForm"
+        [isError]="isSignupError"
+      />
+      <input type="submit" />
+    </form>
+  </div>
+</div>
