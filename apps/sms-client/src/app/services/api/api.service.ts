@@ -16,12 +16,12 @@ export class ApiService {
   private API = 'localhost:3000';
 
   public signup(signupData: ISignup): Observable<SignupRes> {
-    return this.http.post<SignupRes>(`${this.API}/signup`, {
+    return this.http.post<SignupRes>(`${this.API}/api/auth/signup`, {
       signupData,
     });
   }
   public login(loginData: ILogin): Observable<LoginRes> {
-    return this.http.post<LoginRes>(`${this.API}/login`, {
+    return this.http.post<LoginRes>(`${this.API}/api/auth/signIn`, {
       loginData,
     });
   }
